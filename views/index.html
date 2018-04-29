@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>todoList</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1 class="heading">
+                <span class="heading__left">todo</span><span class="heading__right">list</span>
+            </h1>
+        
+            <h2 class="sub-heading">{{ subHeading }}</h2>
+        </header>
+    
+        <section class="form">
+            <input v-model="itemInput" @keyup.enter="addNewTodo" class="form__input" 
+                    type="text" placeholder="Insert your task here...">
+        </section>
+    
+        <ul class="list">
+            <li class="list__item" v-for="item in items" @click="updateTodo(item._id)" :class="{ 'list__item--done': item.completed }">
+                {{ item.name }} <span @click="deleteTodo(item._id)">X</span>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>                       

@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300|Montserrat:300,400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #eceff0;
+  font-family: Montserrat; }
+
+.heading {
+  font-size: 6.5rem;
+  text-align: center;
+  margin: 8rem 0 2.5rem; }
+  .heading > * {
+    display: inline-block; }
+  .heading__left {
+    font-weight: 300; }
+
+.sub-heading {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  color: #bdc3c7; }
+
+.form {
+  max-width: 50rem;
+  margin: 5rem auto 2rem; }
+  .form__input {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #34495e;
+    font: 300 2.5rem 'Ubuntu';
+    color: #34495e; }
+
+.list {
+  width: 50rem;
+  margin: 0 auto; }
+  .list__item {
+    width: 100%;
+    color: #34495e;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: all .3s; }
+    .list__item:hover {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.04); }
+    .list__item--done {
+      text-decoration: line-through;
+      color: #bdc3c7; }
+    .list__item span {
+      float: right;
+      color: #c0392b;
+      opacity: 0;
+      transition: all .3s; }
+      .list__item span:hover {
+        color: #e74c3c; }
+    .list__item:hover span {
+      opacity: 1; }
+
+/*
+
+
+.task:hover span{
+	opacity: 1;
+}
+
+li span {
+  float: right;
+  color: #c0392b;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+li span:hover {
+  color: #e74c3c
+}
+*/

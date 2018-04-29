@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300|Montserrat:300,400,700');
+
+
+// === Variables ===
+$color-bg: #eceff0;
+$color-sub-heading: #bdc3c7;
+$color-input: #34495e;
+$color-delete-button: #c0392b;
+$color-delete-button-hover: #e74c3c;
+
+$form-width: 50rem;
+
+// === Reset ===
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 62.5%; }
+
+
+
+body {
+    background-color: $color-bg;
+    font-family: Montserrat;
+}
+
+// ===== Header =====
+.heading {
+    font-size: 6.5rem;
+    text-align: center;
+    margin: 8rem 0 2.5rem;
+
+    & > * {
+        display: inline-block;
+    }
+
+    &__left {
+        font-weight: 300;
+    }
+}
+
+.sub-heading {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    color: $color-sub-heading;
+}
+
+// ===== Form =====
+.form {
+    max-width: $form-width;
+    margin: 5rem auto 2rem;
+
+    &__input {
+        width: 100%;
+        padding: 1rem 2rem;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $color-input;
+
+        font: 300 2.5rem 'Ubuntu';
+        color: $color-input;
+
+    }
+}
+
+.list {
+    width: $form-width;
+    margin: 0 auto;
+
+    &__item {
+        width: 100%;
+        color: $color-input;
+        font-size: 2rem;
+        padding: 1rem;
+
+        transition: all .3s;
+
+        &:hover {
+            cursor: pointer;
+            background: rgba(black, .04);
+        }
+
+        &--done {
+            text-decoration: line-through;
+            color: $color-sub-heading;
+        }
+
+        span {
+            float: right;
+            color: $color-delete-button;
+            opacity: 0;
+            transition: all .3s;
+
+            &:hover {
+                color: $color-delete-button-hover;
+            }
+        }
+
+        &:hover span {
+            opacity: 1;
+        }
+    }
+}
+/*
+
+
+.task:hover span{
+	opacity: 1;
+}
+
+li span {
+  float: right;
+  color: #c0392b;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+li span:hover {
+  color: #e74c3c
+}
+*/
