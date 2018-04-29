@@ -56,5 +56,6 @@ new Vue({
         .then(data => {
             this.items = data
         })
+        .catch(err => console.log(err))
     }
 })
