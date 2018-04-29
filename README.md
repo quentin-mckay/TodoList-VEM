@@ -1,1 +1,1 @@
-TodoList with Vue front-end and Express/Mongo back-end
+TodoList (Vue Express Mongo) based on Colt Steele AdvDevBootcamp project
